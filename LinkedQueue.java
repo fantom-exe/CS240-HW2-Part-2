@@ -87,6 +87,7 @@ public class LinkedQueue<T> implements QueueInterface<T> {
 		Node getNextNode() {
 			return next;
 		}
+		
 		void setNextNode(Node newNode) {
 			next = newNode;
 		}
