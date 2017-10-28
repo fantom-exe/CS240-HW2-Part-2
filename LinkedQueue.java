@@ -29,7 +29,7 @@ public class LinkedQueue<T> implements QueueInterface<T> {
 	/** Removes and returns the entry at the front of this queue.
 	 @return  The object at the front of the queue.
 	 @throws EmptyQueueException if the queue is empty before the operation. */
-	public T dequeue() throws EmptyQueueException {
+	public T dequeue() {
 		if(isEmpty())
 			throw new EmptyQueueException();
 		
@@ -47,7 +47,7 @@ public class LinkedQueue<T> implements QueueInterface<T> {
 	/**  Retrieves the entry at the front of this queue.
 	 @return  The object at the front of the queue.
 	 @throws  EmptyQueueException if the queue is empty. */
-	public T getFront() throws EmptyQueueException {
+	public T getFront() {
 		if(isEmpty())
 			throw new EmptyQueueException();
 		
@@ -57,7 +57,7 @@ public class LinkedQueue<T> implements QueueInterface<T> {
 	/** Detects whether this queue is empty.
 	 @return  True if the queue is empty, or false otherwise. */
 	public boolean isEmpty() {
-		return (firstNode == null) && (lastNode == null);
+		return firstNode == null && lastNode == null;
 	}
 	
 	/** Removes all entries from this queue. */
