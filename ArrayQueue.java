@@ -12,9 +12,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 	
 //	private EmptyQueueException emptyQueueException = new EmptyQueueException(); // exception to throw of queue is empty
 	
-	public ArrayQueue() {
-		checkCapacity();
-		
+	ArrayQueue() {
 		@SuppressWarnings("unchecked")
 		T[] tempQueue = (T[]) new Object[MAX_CAPACITY - 1];
 		queue = tempQueue;
@@ -34,7 +32,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 	
 	/** Removes and returns the entry at the front of this queue.
 	 @return  The object at the front of the queue.
-	 @throws  EmptyQueueException if the queue is empty before the operation. */
+	 @throws EmptyQueueException if the queue is empty before the operation. */
 	public T dequeue() throws EmptyQueueException {
 		if(isEmpty())
 			throw new EmptyQueueException();
@@ -48,7 +46,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 	
 	/**  Retrieves the entry at the front of this queue.
 	 @return  The object at the front of the queue.
-	 @throws  EmptyQueueException if the queue is empty. */
+	 @throws EmptyQueueException if the queue is empty. */
 	public T getFront() throws EmptyQueueException {
 		if(isEmpty())
 			throw new EmptyQueueException();
